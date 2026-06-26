@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HireMind-AI — Candidate Discovery & Ranking Platform</title>
+    <!-- Google Fonts: Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+    <div class="app-container">
+        
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fa-solid fa-brain-circuit logo-icon"></i>
+                    <h1>HireMind<span>.AI</span></h1>
+                </div>
+                <p class="tagline">Intelligent Talent Intelligence</p>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <div class="nav-section-title">Discovery Control</div>
+                
+                <!-- Weight Adjusters -->
+                <div class="weight-controls">
+                    <div class="control-header-row">
+                        <span class="control-title"><i class="fa-solid fa-sliders"></i> Match Weightings</span>
+                        <button id="reset-weights-btn" class="btn-text-only">Reset</button>
+                    </div>
+                    
+                    <div class="slider-group">
+                        <div class="slider-label">
+                            <span>Role Alignment</span>
+                            <span id="role-weight-val" class="slider-val">4.0</span>
+                        </div>
+                        <input type="range" id="role-weight" min="0" max="10" step="0.5" value="4.0">
+                    </div>
+                    
+                    <div class="slider-group">
+                        <div class="slider-label">
+                            <span>Experience (YOE)</span>
+                            <span id="yoe-weight-val" class="slider-val">2.0</span>
+                        </div>
+                        <input type="range" id="yoe-weight" min="0" max="10" step="0.5" value="2.0">
+                    </div>
+                    
+                    <div class="slider-group">
+                        <div class="slider-label">
+                            <span>Skills Duration</span>
+                            <span id="skills-weight-val" class="slider-val">3.0</span>
+                        </div>
+                        <input type="range" id="skills-weight" min="0" max="10" step="0.5" value="3.0">
+                    </div>
+                    
+                    <div class="slider-group">
+                        <div class="slider-label">
+                            <span>Plain-Text Projects</span>
+                            <span id="plain-weight-val" class="slider-val">2.0</span>
+                        </div>
+                        <input type="range" id="plain-weight" min="0" max="10" step="0.5" value="2.0">
+                    </div>
+                    
+                    <div class="slider-group">
+                        <div class="slider-label">
+                            <span>Behavioral Signals</span>
+                            <span id="behavior-weight-val" class="slider-val">5.0</span>
+                        </div>
+                        <input type="range" id="behavior-weight" min="0" max="10" step="0.5" value="5.0">
+                    </div>
+                </div>
+                
+                <div class="nav-section-title">Integrity Filters</div>
+                <div class="filter-controls">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="filter-honeypots-chk" checked>
+                        <span class="checkmark"></span>
+                        <span class="checkbox-label"><i class="fa-solid fa-shield-halved text-success"></i> Filter Honeypots (~80 traps)</span>
+                    </label>
+                    
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="penalize-consulting-chk" checked>
+                        <span class="checkmark"></span>
+                        <span class="checkbox-label"><i class="fa-solid fa-building-circle-exclamation text-warning"></i> Consulting Service Penalty</span>
+                    </label>
+                    
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="highlight-traps-chk" checked>
+                        <span class="checkmark"></span>
+                        <span class="checkbox-label"><i class="fa-solid fa-triangle-exclamation text-danger"></i> Highlight Traps & Twins</span>
+                    </label>
+                </div>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="active-profile">
+                    <div class="avatar"><i class="fa-solid fa-user-tie"></i></div>
+                    <div class="profile-info">
+                        <div class="name">Recruiter Mode</div>
+                        <div class="role">Founding Team Matcher</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- MAIN CONTENT PANEL -->
+        <main class="main-content">
+            
+            <!-- TOP BAR -->
+            <header class="top-bar">
+                <div class="search-container">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="search-input" placeholder="Search by name, current title, company, or skills...">
+                </div>
+                <div class="actions">
+                    <button id="export-csv-btn" class="btn btn-primary">
+                        <i class="fa-solid fa-file-csv"></i> Export Ranked CSV
+                    </button>
+                    <button id="methodology-btn" class="btn btn-secondary">
+                        <i class="fa-solid fa-book-open"></i> System Architecture
+                    </button>
+                </div>
+            </header>
+            
+            <!-- DASHBOARD WIDGETS -->
+            <section class="dashboard-analytics">
+                <div class="analytics-card">
+                    <div class="card-icon gradient-blue"><i class="fa-solid fa-users"></i></div>
+                    <div class="card-details">
+                        <div class="card-title">Preloaded Pool</div>
+                        <div class="card-value" id="pool-size-val">50</div>
+                        <div class="card-sub">Sample candidates loaded</div>
+                    </div>
+                </div>
+                
+                <div class="analytics-card">
+                    <div class="card-icon gradient-purple"><i class="fa-solid fa-chart-line"></i></div>
+                    <div class="card-details">
+                        <div class="card-title">Average Experience</div>
+                        <div class="card-value" id="avg-yoe-val">6.8 YOE</div>
+                        <div class="card-sub">Perfect founding band (5-9y)</div>
+                    </div>
+                </div>
+                
+                <div class="analytics-card">
+                    <div class="card-icon gradient-pink"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="card-details">
+                        <div class="card-title">Office Match Rate</div>
+                        <div class="card-value" id="office-match-val">64%</div>
+                        <div class="card-sub">Pune/Noida hybrid & local</div>
+                    </div>
+                </div>
+                
+                <div class="analytics-card">
+                    <div class="card-icon gradient-orange"><i class="fa-solid fa-circle-radiation"></i></div>
+                    <div class="card-details">
+                        <div class="card-title">Honeypots Detected</div>
+                        <div class="card-value" id="honeypots-count-val">0</div>
+                        <div class="card-sub">Logical contradictions blocked</div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- RANKINGS SECTION -->
+            <section class="rankings-container">
+                <div class="section-header-row">
+                    <h2>🏆 Candidate Discovery Rankings</h2>
+                    <div class="metrics-summary">
+                        Showing top <span id="displayed-count-val">50</span> ranked fits
+                    </div>
+                </div>
+                
+                <!-- Candidates Grid -->
+                <div id="candidates-grid" class="candidates-grid">
+                    <!-- Cards will be dynamically injected here -->
+                </div>
+            </section>
+        </main>
+        
+        <!-- CANDIDATE DETAIL DRAWER (SLIDING PANEL) -->
+        <aside id="detail-drawer" class="detail-drawer">
+            <div class="drawer-header">
+                <button id="close-drawer-btn" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+                <div class="drawer-header-meta">
+                    <span class="drawer-rank-badge">Rank #<span id="drawer-rank">1</span></span>
+                    <span class="drawer-score-badge">Score: <span id="drawer-score">3.16</span></span>
+                </div>
+            </div>
+            
+            <div class="drawer-body">
+                <!-- Profile Summary Card -->
+                <div class="profile-hero">
+                    <div class="hero-avatar"><i class="fa-solid fa-user-astronaut"></i></div>
+                    <div class="hero-details">
+                        <h2 id="drawer-name">Aarav Trivedi</h2>
+                        <p id="drawer-headline" class="headline">Senior Machine Learning Engineer at Zomato</p>
+                        <div class="hero-tags">
+                            <span class="hero-tag"><i class="fa-solid fa-briefcase"></i> <span id="drawer-yoe">7.2</span> YOE</span>
+                            <span class="hero-tag"><i class="fa-solid fa-location-dot"></i> <span id="drawer-loc">Noida, India</span></span>
+                            <span class="hero-tag" id="drawer-otw-tag"><i class="fa-solid fa-circle-check"></i> Open to Work</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Honeypot Warning Alert -->
+                <div id="drawer-honeypot-alert" class="alert alert-danger hidden">
+                    <div class="alert-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                    <div class="alert-content">
+                        <h4>Honeypot/Trap Profile Detected</h4>
+                        <p id="drawer-honeypot-reason">This profile contains logical contradictions (e.g. 0m duration expert skill) and was disqualified.</p>
+                    </div>
+                </div>
+                
+                <!-- Professional Summary -->
+                <div class="drawer-section">
+                    <h3><i class="fa-solid fa-id-card"></i> Executive Summary</h3>
+                    <p id="drawer-summary" class="summary-text">...</p>
+                </div>
+                
+                <!-- Career History Timeline -->
+                <div class="drawer-section">
+                    <h3><i class="fa-solid fa-timeline"></i> Career History</h3>
+                    <div id="drawer-timeline" class="timeline">
+                        <!-- Dynamically injected -->
+                    </div>
+                </div>
+                
+                <!-- Education -->
+                <div class="drawer-section">
+                    <h3><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+                    <div id="drawer-education" class="education-list">
+                        <!-- Dynamically injected -->
+                    </div>
+                </div>
+
+                <!-- Skills & Trust Grid -->
+                <div class="drawer-section">
+                    <h3><i class="fa-solid fa-screwdriver-wrench"></i> Skills & Trust Index</h3>
+                    <p class="section-explanation">Skills are weighted using an endorsement-and-duration trust index to block keyword stuffers.</p>
+                    <div id="drawer-skills-grid" class="skills-grid">
+                        <!-- Dynamically injected -->
+                    </div>
+                </div>
+                
+                <!-- Platform Behavioral & Engagement Signals -->
+                <div class="drawer-section">
+                    <h3><i class="fa-solid fa-chart-simple"></i> Redrob Platform Signals</h3>
+                    <div class="signals-grid">
+                        <div class="signal-item">
+                            <span class="signal-label">Response Rate</span>
+                            <span class="signal-value" id="sig-response-rate">61%</span>
+                        </div>
+                        <div class="signal-item">
+                            <span class="signal-label">Avg Response Time</span>
+                            <span class="signal-value" id="sig-response-time">4.2 hours</span>
+                        </div>
+                        <div class="signal-item">
+                            <span class="signal-label">Notice Period</span>
+                            <span class="signal-value" id="sig-notice-period">15 days</span>
+                        </div>
+                        <div class="signal-item">
+                            <span class="signal-label">Expected Salary</span>
+                            <span class="signal-value" id="sig-salary">24.5 - 35.0 LPA</span>
+                        </div>
+                        <div class="signal-item">
+                            <span class="signal-label">Preferred Mode</span>
+                            <span class="signal-value text-capitalize" id="sig-work-mode">Hybrid</span>
+                        </div>
+                        <div class="signal-item">
+                            <span class="signal-label">GitHub Activity</span>
+                            <span class="signal-value" id="sig-github">84 / 100</span>
+                        </div>
+                        <div class="signal-item">
+                            <span class="signal-label">Platform Activity</span>
+                            <span class="signal-value" id="sig-last-active">Active 12d ago</span>
+                        </div>
+                        <div class="signal-item">
+                            <span class="signal-label">Profile Completeness</span>
+                            <span class="signal-value" id="sig-completeness">92%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- METHODOLOGY MODAL -->
+        <div id="methodology-modal" class="modal-overlay hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>🧠 HireMind-AI System Architecture</h2>
+                    <button id="close-modal-btn" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="modal-body">
+                    <h3>Composite Ranking Logic</h3>
+                    <p>HireMind-AI scores candidates by mapping their structured profiles against specific job description requirements using a multi-factor weighting engine:</p>
+                    <ul>
+                        <li><strong>Role Score (40%):</strong> Assesses current and past job titles. AI/ML engineers receive full points, general tech gets a minor discount, and irrelevant titles (HR, Marketing) are heavily penalized.</li>
+                        <li><strong>Experience Alignment (20%):</strong> Matches target founding-level seniority (5-9 YOE) and penalizes excessive or junior bands.</li>
+                        <li><strong>Skills Trust Scoring (30%):</strong> Blocks keyword stuffers. Replaces simple keyword counting with a weighted trust index based on skill use duration and peer endorsements:
+                            <br><code>Trust = (duration_months / 12) * ln(e + endorsements)</code>
+                        </li>
+                        <li><strong>Plain-Language Extraction (20%):</strong> Searches career descriptions for key projects (e.g., search indexing, recommendation engines) to identify great candidates who don't load trendy buzzwords.</li>
+                        <li><strong>Behavioral Modifiers (Multipliers):</strong> Real-time platform signals (responsiveness, notice period, location willingness, GitHub contributions) are used as multiplicative factors.</li>
+                    </ul>
+                    <h3>Honeypot Filter</h3>
+                    <p>All candidates run through an integrity check to automatically identify and drop trap profiles that contain logical contradictions (e.g. expert proficiency with 0 months used, or job durations exceeding total experience).</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Preloaded Data and JS Logic -->
+    <script src="candidates.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

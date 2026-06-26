@@ -1,0 +1,101 @@
+candidate_id,rank,score,reasoning
+CAND_0018499,1,3.1626,"Highly relevant Senior Machine Learning Engineer (7.2 YOE) from Zomato with strong skills in Weaviate, Pinecone; based locally and active on platform."
+CAND_0042506,2,2.7955,Outstanding match with 4.2 years in ML; demonstrated vector search expertise at Verloop.io; 15d notice.
+CAND_0081846,3,2.6692,Outstanding match with 6.7 years in ML; demonstrated vector search expertise at Razorpay; 30d notice.
+CAND_0054394,4,2.6282,Outstanding match with 4.1 years in ML; demonstrated vector search expertise at PharmEasy; 30d notice.
+CAND_0068932,5,2.6031,"Exceptional ML Engineer with 5.2 YOE; shipped ML systems at Krutrim and has strong skills in Milvus, RAG."
+CAND_0068811,6,2.5212,"Highly relevant Applied ML Engineer (8.0 YOE) from Freshworks with strong skills in Vector Search, Qdrant; based locally and active on platform."
+CAND_0052328,7,2.5093,"Exceptional Recommendation Systems Engineer with 6.5 YOE; shipped ML systems at Amazon and has strong skills in LoRA, OpenSearch."
+CAND_0050454,8,2.4712,Outstanding match with 6.8 years in ML; demonstrated vector search expertise at Rephrase.ai; 30d notice.
+CAND_0007009,9,2.4503,"Top-tier Recommendation Systems Engineer with 7.9 YOE, showing strong search/retrieval alignment at Wysa; Noida-based with 30d notice."
+CAND_0046525,10,2.4471,"Top-tier Senior Machine Learning Engineer with 6.1 YOE, showing strong search/retrieval alignment at Genpact AI; Pune-based with 60d notice."
+CAND_0075574,11,2.4263,Outstanding match with 5.7 years in ML; demonstrated vector search expertise at Haptik; 60d notice.
+CAND_0017178,12,2.4240,Outstanding match with 4.2 years in ML; demonstrated vector search expertise at Swiggy; 30d notice.
+CAND_0039754,13,2.3423,Outstanding match with 16.2 years in ML; demonstrated vector search expertise at Meta; 30d notice.
+CAND_0099806,14,2.3251,Outstanding match with 4.6 years in ML; demonstrated vector search expertise at Mad Street Den; 30d notice.
+CAND_0041669,15,2.3161,"Top-tier Recommendation Systems Engineer with 8.0 YOE, showing strong search/retrieval alignment at CRED; Noida-based with 60d notice."
+CAND_0043637,16,2.3135,Solid product-oriented developer with 5.5 years experience; shows good retrieval project exposure at Rephrase.ai.
+CAND_0095619,17,2.3027,"Strong NLP Engineer with 15.6 YOE, experienced in NLP/ML at Nykaa; strong skills in Pinecone, Weaviate; Mumbai-based (note: higher YOE (15.6 yrs))."
+CAND_0036437,18,2.2966,Solid product-oriented developer with 4.8 years experience; shows good retrieval project exposure at Rephrase.ai (note: lower YOE (4.8 yrs)).
+CAND_0077337,19,2.2937,"Strong Staff Machine Learning Engineer with 7.0 YOE, experienced in NLP/ML at Paytm; strong skills in Semantic Search, QLoRA; willing to relocate (note: longer notice (60d))."
+CAND_0051004,20,2.2712,"Relevant ML background (4.7 YOE) from CRED; has strong skills in Embeddings, Semantic Search; 15d notice (note: lower YOE (4.7 yrs))."
+CAND_0063622,21,2.2676,"Relevant ML background (5.2 YOE) from Niramai; has strong skills in Vector Search, Fine-tuning LLMs; 30d notice."
+CAND_0070514,22,2.2630,Solid product-oriented developer with 5.5 years experience; shows good retrieval project exposure at Glance (note: longer notice (60d)).
+CAND_0037160,23,2.2382,Solid product-oriented developer with 6.0 years experience; shows good retrieval project exposure at Haptik.
+CAND_0073007,24,2.2292,Solid product-oriented developer with 5.8 years experience; shows good retrieval project exposure at Aganitha (note: longer notice (60d)).
+CAND_0067866,25,2.2212,"Strong Senior Software Engineer (ML) with 6.4 YOE, experienced in NLP/ML at Tech Mahindra; strong skills in Embeddings, pgvector; Noida-based."
+CAND_0027691,26,2.2157,"Relevant ML background (6.5 YOE) from Haptik; has strong skills in LoRA, PEFT; 15d notice."
+CAND_0006567,27,2.2099,"Strong Senior AI Engineer with 7.9 YOE, experienced in NLP/ML at Meta; strong skills in Search Backend, Vector Representations; Noida-based (note: longer notice (60d))."
+CAND_0000031,28,2.2064,"Relevant ML background (6.0 YOE) from Swiggy; has strong skills in FAISS, Pinecone; 60d notice (note: longer notice (60d))."
+CAND_0041610,29,2.1856,"Strong Recommendation Systems Engineer with 6.7 YOE, experienced in NLP/ML at Zoho; strong skills in LoRA, Elasticsearch; willing to relocate."
+CAND_0008295,30,2.1652,"Strong AI Research Engineer with 6.5 YOE, experienced in NLP/ML at Razorpay; strong skills in PEFT, Weaviate; Pune-based."
+CAND_0048558,31,2.1450,"Strong Data Scientist with 6.7 YOE, experienced in NLP/ML at Rephrase.ai; strong skills in Information Retrieval, OpenSearch; Noida-based."
+CAND_0037566,32,2.1207,"Strong Machine Learning Engineer with 6.9 YOE, experienced in NLP/ML at LinkedIn; strong skills in Pinecone, LoRA; Bangalore-based."
+CAND_0062247,33,2.1002,"Strong AI Engineer with 7.3 YOE, experienced in NLP/ML at Google; strong skills in Pinecone, Vector Search; willing to relocate."
+CAND_0066999,34,2.0601,"Strong Recommendation Systems Engineer with 5.9 YOE, experienced in NLP/ML at Microsoft; strong skills in OpenSearch, FAISS; Delhi-based."
+CAND_0004402,35,2.0508,"Relevant ML background (6.0 YOE) from Yellow.ai; has strong skills in OpenSearch, PEFT; 60d notice (note: longer notice (60d))."
+CAND_0044213,36,2.0445,Solid product-oriented developer with 3.7 years experience; shows good retrieval project exposure at Haptik (note: lower YOE (3.7 yrs)).
+CAND_0007596,37,2.0306,"Strong Junior ML Engineer with 4.4 YOE, experienced in NLP/ML at Flipkart; strong skills in Weaviate, Vector Search; Delhi-based (note: lower YOE (4.4 yrs))."
+CAND_0098454,38,2.0290,"Strong AI Specialist with 6.6 YOE, experienced in NLP/ML at Meesho; strong skills in Vector Search, OpenSearch; willing to relocate (note: longer notice (60d))."
+CAND_0068351,39,2.0197,Solid product-oriented developer with 6.4 years experience; shows good retrieval project exposure at Sarvam AI.
+CAND_0025882,40,2.0181,"Relevant ML background (5.6 YOE) from Freshworks; has strong skills in FAISS, Vector Search; 45d notice."
+CAND_0043860,41,2.0173,"Strong Junior ML Engineer with 6.1 YOE, experienced in NLP/ML at Aganitha; strong skills in pgvector, Semantic Search; willing to relocate."
+CAND_0071939,42,2.0101,Solid product-oriented developer with 6.4 years experience; shows good retrieval project exposure at Krutrim.
+CAND_0082086,43,2.0074,"Strong Senior Software Engineer (ML) with 6.0 YOE, experienced in NLP/ML at Razorpay; strong skills in FAISS, Pinecone; Delhi-based."
+CAND_0010149,44,1.9986,"Strong ML Engineer with 6.9 YOE, experienced in NLP/ML at Glance; strong skills in Milvus, Vector Search; Bangalore-based (note: longer notice (90d))."
+CAND_0010770,45,1.9941,"Strong Recommendation Systems Engineer with 15.2 YOE, experienced in NLP/ML at Aganitha; strong skills in Qdrant, LLMs; willing to relocate (note: higher YOE (15.2 yrs))."
+CAND_0038368,46,1.9760,"Relevant ML background (5.4 YOE) from PhonePe; has strong skills in Embeddings, FAISS; 30d notice."
+CAND_0073314,47,1.9751,"Strong Senior Software Engineer (ML) with 5.2 YOE, experienced in NLP/ML at Aganitha; strong skills in PEFT, Milvus; Noida-based (note: longer notice (60d))."
+CAND_0078492,48,1.9673,"Strong Recommendation Systems Engineer with 5.1 YOE, experienced in NLP/ML at Verloop.io; strong skills in FAISS, Qdrant; willing to relocate."
+CAND_0084283,49,1.9634,"Relevant ML background (3.6 YOE) from Sarvam AI; has strong skills in Pinecone, Elasticsearch; 30d notice (note: lower YOE (3.6 yrs))."
+CAND_0079284,50,1.9583,"Strong Machine Learning Engineer with 4.9 YOE, experienced in NLP/ML at Google; strong skills in QLoRA, Qdrant; Hyderabad-based (note: lower YOE (4.9 yrs))."
+CAND_0066690,51,1.9579,Software developer with adjacent skills (4.8 YOE) at Freshworks; shows general tech proficiency but less direct AI search experience.
+CAND_0099347,52,1.9569,Solid developer with 3.5 YOE at Swiggy; included as filler fit due to good location (Noida-based) and active engagement.
+CAND_0033179,53,1.9544,Solid developer with 6.9 YOE at Wipro; included as filler fit due to good location (willing to relocate) and active engagement.
+CAND_0017918,54,1.9533,Solid developer with 3.2 YOE at Aganitha; included as filler fit due to good location (Bangalore-based) and active engagement.
+CAND_0039587,55,1.9250,Solid developer with 6.2 YOE at HCL; included as filler fit due to good location (Mumbai-based) and active engagement.
+CAND_0072688,56,1.9183,"Technical background (6.9 YOE) with strong skills in Milvus, LoRA; limited direct ML production experience but strong general backend at Niramai."
+CAND_0092692,57,1.9131,"Technical background (3.2 YOE) with strong skills in QLoRA, Embeddings; limited direct ML production experience but strong general backend at Ola."
+CAND_0005260,58,1.9123,"Technical background (5.2 YOE) with strong skills in Information Retrieval, Semantic Search; limited direct ML production experience but strong general backend at Netflix."
+CAND_0098217,59,1.8958,Software developer with adjacent skills (6.4 YOE) at Glance; shows general tech proficiency but less direct AI search experience.
+CAND_0045250,60,1.8897,"Technical background (6.6 YOE) with strong skills in Milvus, LoRA; limited direct ML production experience but strong general backend at Rephrase.ai."
+CAND_0032527,61,1.8893,"Technical background (3.9 YOE) with strong skills in Vector Search, Milvus; limited direct ML production experience but strong general backend at Flipkart."
+CAND_0003841,62,1.8727,"Technical background (5.0 YOE) with strong skills in Pinecone, Fine-tuning LLMs; limited direct ML production experience but strong general backend at Tech Mahindra."
+CAND_0070204,63,1.8605,Technical background (8.2 YOE) with strong skills in QLoRA; limited direct ML production experience but strong general backend at CRED.
+CAND_0046132,64,1.8589,"Technical background (4.3 YOE) with strong skills in Information Retrieval, Fine-tuning LLMs; limited direct ML production experience but strong general backend at Verloop.io."
+CAND_0018888,65,1.8548,Software developer with adjacent skills (6.5 YOE) at Razorpay; shows general tech proficiency but less direct AI search experience.
+CAND_0074024,66,1.8522,Solid developer with 3.9 YOE at Haptik; included as filler fit due to good location (Delhi-based) and active engagement.
+CAND_0054546,67,1.8366,Software developer with adjacent skills (4.9 YOE) at Razorpay; shows general tech proficiency but less direct AI search experience.
+CAND_0081852,68,1.8347,Software developer with adjacent skills (5.9 YOE) at Mad Street Den; shows general tech proficiency but less direct AI search experience.
+CAND_0021410,69,1.8296,Solid developer with 4.0 YOE at Krutrim; included as filler fit due to good location (Hyderabad-based) and active engagement.
+CAND_0015065,70,1.8255,Solid developer with 3.9 YOE at Flipkart; included as filler fit due to good location (Delhi-based) and active engagement.
+CAND_0060054,71,1.8216,Software developer with adjacent skills (6.4 YOE) at Mad Street Den; shows general tech proficiency but less direct AI search experience.
+CAND_0029367,72,1.8203,Software developer with adjacent skills (5.7 YOE) at Rephrase.ai; shows general tech proficiency but less direct AI search experience.
+CAND_0030784,73,1.8104,"Technical background (4.4 YOE) with strong skills in Embeddings, RAG; limited direct ML production experience but strong general backend at Yellow.ai."
+CAND_0009307,74,1.8075,"Technical background (3.3 YOE) with strong skills in Fine-tuning LLMs, Information Retrieval; limited direct ML production experience but strong general backend at Zomato."
+CAND_0042029,75,1.8047,Solid developer with 6.5 YOE at Flipkart; included as filler fit due to good location (Delhi-based) and active engagement.
+CAND_0006418,76,1.8042,"Technical background (5.7 YOE) with strong skills in Semantic Search, Embeddings; limited direct ML production experience but strong general backend at Verloop.io."
+CAND_0005883,77,1.8032,Software developer with adjacent skills (3.5 YOE) at Unacademy; shows general tech proficiency but less direct AI search experience.
+CAND_0061257,78,1.8029,Software developer with adjacent skills (8.0 YOE) at LinkedIn; shows general tech proficiency but less direct AI search experience.
+CAND_0036655,79,1.7972,"Technical background (6.6 YOE) with strong skills in Vector Search, Information Retrieval; limited direct ML production experience but strong general backend at Cognizant."
+CAND_0055362,80,1.7956,Software developer with adjacent skills (3.1 YOE) at HCL; shows general tech proficiency but less direct AI search experience.
+CAND_0017960,81,1.7895,Solid developer with 7.7 YOE at Nykaa; included as filler fit due to good location (Bangalore-based) and active engagement.
+CAND_0031842,82,1.7866,Software developer with adjacent skills (3.5 YOE) at Ola; shows general tech proficiency but less direct AI search experience.
+CAND_0019845,83,1.7848,Software developer with adjacent skills (3.4 YOE) at Zomato; shows general tech proficiency but less direct AI search experience.
+CAND_0017093,84,1.7817,Solid developer with 5.9 YOE at Zoho; included as filler fit due to good location (Hyderabad-based) and active engagement.
+CAND_0046459,85,1.7814,"Technical background (4.5 YOE) with strong skills in Qdrant, Semantic Search; limited direct ML production experience but strong general backend at upGrad."
+CAND_0052195,86,1.7684,"Technical background (6.3 YOE) with strong skills in Information Retrieval, LoRA; limited direct ML production experience but strong general backend at Sarvam AI."
+CAND_0090155,87,1.7596,Solid developer with 5.8 YOE at Swiggy; included as filler fit due to good location (Pune-based) and active engagement.
+CAND_0045475,88,1.7574,"Technical background (4.9 YOE) with strong skills in Pinecone, QLoRA; limited direct ML production experience but strong general backend at Genpact AI."
+CAND_0053527,89,1.7535,"Technical background (7.0 YOE) with strong skills in Pinecone, Qdrant; limited direct ML production experience but strong general backend at PhonePe."
+CAND_0070525,90,1.7421,"Technical background (5.4 YOE) with strong skills in LLMs, Embeddings; limited direct ML production experience but strong general backend at Mad Street Den."
+CAND_0012840,91,1.7401,Software developer with adjacent skills (3.7 YOE) at Nykaa; shows general tech proficiency but less direct AI search experience.
+CAND_0081480,92,1.7349,Software developer with adjacent skills (5.6 YOE) at Sarvam AI; shows general tech proficiency but less direct AI search experience.
+CAND_0086893,93,1.7308,"Technical background (3.9 YOE) with strong skills in LLMs, QLoRA; limited direct ML production experience but strong general backend at Unacademy."
+CAND_0034867,94,1.7281,Technical background (4.3 YOE) with relevant engineering skills; limited direct ML production experience but strong general backend at PhonePe.
+CAND_0007052,95,1.7267,Solid developer with 6.5 YOE at Unacademy; included as filler fit due to good location (Pune-based) and active engagement.
+CAND_0082262,96,1.7259,Solid developer with 5.9 YOE at Wipro; included as filler fit due to good location (Bangalore-based) and active engagement.
+CAND_0005509,97,1.7222,"Technical background (6.0 YOE) with strong skills in Fine-tuning LLMs, Qdrant; limited direct ML production experience but strong general backend at Ola."
+CAND_0066376,98,1.7076,"Technical background (5.7 YOE) with strong skills in LoRA, LLMs; limited direct ML production experience but strong general backend at Dream11."
+CAND_0018549,99,1.7074,Software developer with adjacent skills (6.8 YOE) at Uber; shows general tech proficiency but less direct AI search experience.
+CAND_0034164,100,1.7067,Software developer with adjacent skills (3.6 YOE) at Haptik; shows general tech proficiency but less direct AI search experience.

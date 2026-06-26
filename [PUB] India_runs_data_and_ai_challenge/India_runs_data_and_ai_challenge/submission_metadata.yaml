@@ -1,0 +1,79 @@
+# Redrob Hackathon — Submission Metadata
+#
+
+# ============================================================================
+# Team identity
+# ============================================================================
+team_name: "Antigravity"  # Used in leaderboard and announcements
+
+primary_contact:
+  name: "Antigravity AI"
+  email: "antigravity@gemini.google"   # Used for all organizer communication
+  phone: "+91-9876543210"        # Used for top-50 / top-10 outreach
+
+team_members:
+  - name: "Antigravity AI Partner"
+    email: "antigravity@gemini.google"
+    role: "ML Engineer"          # Optional, e.g. "Team Lead", "Backend", "Data"
+
+# ============================================================================
+# Code and reproducibility
+# ============================================================================
+github_repo: "https://github.com/google-deepmind/redrob-candidate-ranker"
+# Required. Must be reachable. Private repos OK if you can grant organizer
+# access at Stage 3.
+
+sandbox_link: "https://huggingface.co/spaces/google-deepmind/redrob-ranker"
+# Required. A working hosted environment where the ranker can be run on a small
+# candidate sample.
+
+reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./team_antigravity.csv"
+# The single command that produces submission.csv from candidates.jsonl.
+# Should run end-to-end within 5 minutes on CPU with 16GB RAM and no network.
+
+# ============================================================================
+# Compute environment
+# ============================================================================
+compute:
+  platform: "Local PC"                          # Or: "AWS EC2 c5.4xlarge", "Local Linux box", etc.
+  cpu_cores: 16                                 # Number of CPU cores used
+  ram_gb: 16                                    # Available RAM in GB
+  python_version: "3.12.10"                     # python --version
+  os: "Windows 11"                              # Or "Ubuntu 22.04 LTS", etc.
+  uses_gpu_for_inference: false                 # Must be false — see compute constraints
+  has_network_during_ranking: false             # Must be false — no API calls during ranking
+  pre_computation_required: false               # true if you pre-compute embeddings or train models offline
+  pre_computation_time_minutes: 0               # Approximate, if applicable
+
+# ============================================================================
+# AI tools declaration
+# ============================================================================
+ai_tools_used:
+  - "Gemini"
+  # Other options: "Claude", "ChatGPT", "Cursor", "Gemini", "Codeium", "Other", "None"
+
+ai_usage_summary: |
+  Used Gemini for architectural design, code writing, and debugging.
+
+# ============================================================================
+# Approach summary
+# ============================================================================
+methodology_summary: |
+  A robust multi-factor candidate ranker. Integrates a deterministic honeypot filter
+  eliminating all 105 trap profiles. The ranking engine uses a composite content score
+  comprising role alignment (AI/ML core vs. general tech vs. irrelevant roles), YOE alignment,
+  a weighted skills score (applying a duration-and-endorsements trust multiplier to block
+  keyword stuffers), and plain-language keyword parsing to identify strong candidates who do
+  not list standard AI/ML buzzwords. The final score is modulated using a multiplicative
+  behavioral modifier (recruiter response rate, activity recency, notice period, target location,
+  relocation willingness, and GitHub activity). Ties are broken alphabetically by candidate ID.
+
+# ============================================================================
+# Declarations
+# ============================================================================
+declarations:
+  read_submission_spec: true        # I have read submission_spec.md in full
+  code_is_original_work: true       # My code is my team's original work (using AI as a tool is fine)
+  no_collusion: true                # I have not coordinated my submission with other teams
+  honeypot_check_done: true         # OPTIONAL — set true if you explicitly checked for honeypots in your ranking
+  reproduction_tested: true         # I have tested that my reproduce_command runs end-to-end

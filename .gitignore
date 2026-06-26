@@ -1,0 +1,20 @@
+# Ignore large data files recursively
+**/candidates.jsonl
+**/candidates.jsonl.gz
+candidates.jsonl
+candidates.jsonl.gz
+
+# Ignore system files
+**/.DS_Store
+**/Thumbs.db
+
+# Ignore Python caches
+**/__pycache__/
+**/*.pyc
+
+# Ignore local scratch / conversion files
+**/flagged_details.txt
+**/extract_docs.py
+**/convert_sample.py
+**/convert_to_xlsx.py
+**/init_git_root.py
